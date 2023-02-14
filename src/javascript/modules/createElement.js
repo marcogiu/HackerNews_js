@@ -1,15 +1,10 @@
-import githubImg from '../img/github-icon.svg'
-import linkedinImg from '../img/linkedin-icon.svg'
-import websiteImg from '../img/website-icon.svg'
+import githubImg from '/src/img/github-icon.svg'
+import linkedinImg from '/src/img/linkedin-icon.svg'
+import websiteImg from '/src/img/website-icon.svg';
 
 const linkWebsite = 'https://marcogiu.github.io/myWebsite/'
 const linkGithub = 'https://github.com/marcogiu'
 const linkLinkedin = 'https://www.linkedin.com/in/marco-giuliani-2a20b4179/'
-
-createHeader()
-createMain()
-
-
 
 function createHeader() {
 
@@ -53,3 +48,6 @@ function createMain() {
   loadMore.innerHTML = 'Load More'
   main.appendChild(loadMore)
 }
+
+createHeader()
+createMain()
