@@ -53,14 +53,3 @@ function createMain() {
   loadMore.innerHTML = 'Load More'
   main.appendChild(loadMore)
 }
-
-
-
-
-
-
-
-
-
-
-
