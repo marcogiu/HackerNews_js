@@ -39,7 +39,7 @@ const loadMore_btn = document.querySelector('.load-more')
 
 loadMore_btn.addEventListener('click', () => {
   index += 10
-  getNews()
+  loadNews()
 })
 
 
