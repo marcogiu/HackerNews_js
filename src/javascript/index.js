@@ -7,8 +7,6 @@ import { createMain } from './createElement.js'
 const news_URL = 'https://hacker-news.firebaseio.com/v0/newstories.json'
 let index = 0
 
-
-
 // fetch and return the list of news
 async function getListNews() {
   const response = await fetch(news_URL)
