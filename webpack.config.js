@@ -20,21 +20,9 @@ module.exports = {
 
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/i,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: ["style-loader", "css-loader", "sass-loader",],
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/i,
-        loader: 'file-loader',
-        options: {
-          name: '/img/[name].[ext]'
-        }
-      }
+      { test: /\.(js|jsx)$/i, loader: 'babel-loader', exclude: /node_modules/ },
+      { test: /\.s[ac]ss$/i, use: ["style-loader", "css-loader", "sass-loader",] },
+      { test: /\.(png|svg|jpg|gif)$/i, loader: 'file-loader', options: { name: '/img/[name].[ext]' } }
     ],
   },
   devServer: {
