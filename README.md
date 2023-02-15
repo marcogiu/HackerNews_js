@@ -1,2 +1,2 @@
-# HackerNews_js
+# HackerNews
  
