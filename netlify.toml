@@ -1,1 +1,2 @@
-API_URL= https://hacker-news.firebaseio.com/v0/newstories.json
+[build.environment]
+  API_URL= "https://hacker-news.firebaseio.com/v0/newstories.json"
