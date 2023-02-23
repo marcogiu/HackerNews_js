@@ -15,6 +15,7 @@ createFooter()
 const API_URL = process.env.API_URL
 const API_URL_ID = process.env.API_URL_ID
 
+
 let count = 0
 const loadMore_button = document.querySelector('.load-more')
 
@@ -23,7 +24,8 @@ function createCardFromId(news) {
 }
 
 async function fetchItems(id) {
-  axios.get(API_URL_ID)
+  axios.get(`${API_URL_ID}/${id}.json`)
+
     .then(response => {
       const data = _.get(response, 'data')
       createCardFromId(data)
@@ -41,8 +43,6 @@ async function loadNews() {
 }
 
 loadNews()
-
-
 
 
 loadMore_button.addEventListener('click', () => {
