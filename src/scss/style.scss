@@ -39,7 +39,7 @@ header {
   align-items: center;
   h1 {
       margin-left: 2vw;
-      font-size: 2.3em;
+      font-size: 2.5em;
       color: $color3;
     }
   ul {
@@ -52,7 +52,7 @@ header {
     background-color: $color3;
     border-radius: 1em;
     .img {
-      width: 6vw;
+      width: 3em;
       &:hover {
         transform: scale(1.2);
       }
@@ -84,8 +84,8 @@ main {
       justify-content: space-around;
       .card-title {
         margin: 0 auto;
-        font-size: 1.6em;
-        width: 70vw;
+        font-size: 1.8em;
+        width: 75vw;
         text-transform: uppercase;
       }
       .card-data {
@@ -93,6 +93,16 @@ main {
         justify-content: space-between;
         align-items: center;
         margin: 0 3vw;
+        .card-link {
+            font-size: 1.6em;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $color5;
+          }
+          .card-time {
+            font-size: 1.5em;
+            font-family: $font-family2;
+          }
       }
     }
   }
@@ -107,16 +117,27 @@ main {
     font-size: 3vw;
     cursor: pointer;
     &:hover {
-      color: rgba($color4, $alpha: 0.7);
+      background-color: rgba($color4, $alpha: 0.8);
     }
   }
 }
 
 
 @media  screen and (min-width:768px) {
+
+  :root {
+    font-size: 20px;
+  }
+
   main {
     .container{
       grid-template-columns: 1fr 1fr;
+      .card {
+        width: 45vw;
+        .card-title {
+          width: 40vw;
+        }
+      }
     }
   }
 }

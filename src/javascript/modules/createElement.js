@@ -72,7 +72,7 @@ export function createCard(news) {
 
 
   let date = document.createElement('p')
-  date.classList.add('card-date')
+  date.classList.add('card-time')
   date.innerHTML = `${timeConverter(news.time)}`
 
   link.after(date)
