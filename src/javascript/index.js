@@ -10,6 +10,8 @@ createHeader()
 createMain()
 createFooter()
 
+
+
 const API_URL = (process.env.API_URL)
 let count = 0
 const loadMore_button = document.querySelector('.load-more')

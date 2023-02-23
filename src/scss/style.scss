@@ -75,38 +75,24 @@ main {
     .card {
       background-color: $color2;
       width: 80vw;
-      height: 20vh;
+      height: 15vh;
       border-radius: 1.5em;
-      display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
+      align-items: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
       .card-title {
+        margin: 0 auto;
         font-size: 1.6em;
-        width: 75vw;
-        flex: 1 0 1;
+        width: 70vw;
         text-transform: uppercase;
       }
-      .card-link {
-        flex: 1 0 1;
-        margin-top: 1vh;
-        font-size: 3.5vw;
-        width: 30vw;
-        text-align: left;
-        text-decoration: none;
-        color: $color4;
-        cursor: pointer;
-        text-transform: uppercase;
-        &:hover {
-          color: rgba($color5, $alpha: 0.7);
-        }
-      }
-      .card-date {
-        flex: 1 0 1;
-        margin-left: 5vw;
-        font-size: 4vw;
-        font-family: $font-family2;
-        color: $color5;
+      .card-data {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 3vw;
       }
     }
   }

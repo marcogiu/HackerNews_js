@@ -60,11 +60,16 @@ export function createCard(news) {
   title.innerHTML = `${news.title}`
   card.appendChild(title)
 
+  let dataContainer = document.createElement('div')
+  dataContainer.classList.add('card-data')
+  title.after(dataContainer)
+
   let link = document.createElement('a')
   link.classList.add('card-link')
   link.setAttribute('href', news.url)
   link.innerHTML = 'click here to read'
-  title.after(link)
+  dataContainer.appendChild(link)
+
 
   let date = document.createElement('p')
   date.classList.add('card-date')
