@@ -12,7 +12,9 @@ createFooter()
 
 
 
-const API_URL = (process.env.API_URL)
+const API_URL = process.env.API_URL
+const API_URL_ID = process.env.API_URL_ID
+
 let count = 0
 const loadMore_button = document.querySelector('.load-more')
 
@@ -21,7 +23,7 @@ function createCardFromId(news) {
 }
 
 async function fetchItems(id) {
-  axios.get(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
+  axios.get(API_URL_ID)
     .then(response => {
       const data = _.get(response, 'data')
       createCardFromId(data)
