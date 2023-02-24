@@ -6,6 +6,8 @@ $color2: #801336;
 $color3: #c72c41;
 $color4: #ee4540;
 $color5: #EF7674;
+$color6: #ffffff;
+$color7: #000000;
 $font-family:'Ubuntu Condensed',sans-serif;
 $font-family2: 'Pacifico',cursive;
 
@@ -27,6 +29,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   scrollbar-color: $color5;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -66,6 +69,10 @@ main {
   align-items: center;
   flex-direction: column;
   width: 100vw;
+  .main-title {
+    margin-top: 2vh;
+    font-size: 3em;
+  }
   .container {
     margin-top: 2.5vh;
     gap: 2.5vh;
@@ -73,6 +80,11 @@ main {
     grid-template-columns: 1fr;
     grid-gap: 2vh;
     .card {
+      &:hover {
+        background-color: $color1;
+        .card-title{ color: $color6}
+        .card-time { color: $color7}
+      }
       background-color: $color2;
       width: 80vw;
       height: 15vh;
@@ -98,10 +110,15 @@ main {
             text-transform: uppercase;
             text-decoration: none;
             color: $color5;
+            &:hover {
+              text-decoration: underline;
+              color: rgba($color5, $alpha: 0.5);
+            }
           }
           .card-time {
             font-size: 1.5em;
             font-family: $font-family2;
+            color: rgba($color6, $alpha: 0.7);
           }
       }
     }
@@ -110,23 +127,85 @@ main {
     background-color: $color4;
     border: none;
     margin: 5vh auto;
-    width: 30vw;
-    height: 15vw;
+    width: 10em;
+    height: 3em;
     border-radius: 5em;
     font-weight: 600;
-    font-size: 3vw;
+    font-size: 1.8em;
     cursor: pointer;
+    text-transform: uppercase;
+    font-family: $font-family;
     &:hover {
-      background-color: rgba($color4, $alpha: 0.8);
+      background-color: rgba($color4, $alpha: 0.6);
+    }
+    &:active {
+      background-color: rgba($color4, $alpha: 0.9);
+    }
+  }
+  .up-btn, .down-btn {
+    background-color: $color6;
+    border: 0.1em solid $color1;
+    padding: 0.3em 0.7em;
+    border-radius: 50%;
+    color: $color1;
+    text-decoration: none;
+    font-size: 3em;
+    &:hover {
+      background-color: $color5;
+    }
+    &:active {
+      background-color: rgba($color5, $alpha: 0.5);
+    }
+  }
+  .up-btn {
+    position: fixed;
+    bottom: 3.5em;
+    right: 1em;
+  }
+  .down-btn {
+      position: fixed;
+        bottom: 1em;
+        right: 1em;
+  }
+}
+
+footer {
+  background-color: $color2;
+  height: fit-content;
+  width: 100%;
+  .created-by {
+    font-size: 1.5em;
+    text-align: center;
+    padding: 2vh 0;
+    a {
+      color: $color5;
     }
   }
 }
 
-
-@media  screen and (min-width:768px) {
+@media screen and (min-width:768px) and (max-width:1023px) {
 
   :root {
-    font-size: 20px;
+    font-size: 11px;
+  }
+
+  main {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      .card {
+        width: 45vw;
+        .card-title {
+          width: 40vw;
+        }
+      }
+    }
+  }
+}
+
+@media  screen and (min-width:1024px) {
+
+  :root {
+    font-size: 12px;
   }
 
   main {

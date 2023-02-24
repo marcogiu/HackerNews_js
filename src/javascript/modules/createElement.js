@@ -39,6 +39,12 @@ export function createMain() {
   let main = document.createElement('main')
   document.body.appendChild(main)
 
+  let titleMain = document.createElement('h2')
+  titleMain.classList.add('main-title')
+  titleMain.innerHTML = 'Latest News from Hacker News'
+  main.appendChild(titleMain)
+
+
   let container = document.createElement('div')
   container.classList.add('container')
   main.appendChild(container)
@@ -46,7 +52,20 @@ export function createMain() {
   let loadMore = document.createElement('button')
   loadMore.classList.add('load-more')
   loadMore.innerHTML = 'Load More'
+  loadMore.id = 'load-more'
   main.appendChild(loadMore)
+
+  let upButton = document.createElement('a')
+  upButton.classList.add('up-btn')
+  upButton.innerHTML = '&#8638;	'
+  upButton.href = '#'
+  loadMore.after(upButton)
+
+  let downButton = document.createElement('a')
+  downButton.classList.add('down-btn')
+  downButton.innerHTML = '&#8643;'
+  downButton.href = '#load-more'
+  upButton.after(downButton)
 }
 
 export function createCard(news) {
@@ -67,6 +86,8 @@ export function createCard(news) {
   let link = document.createElement('a')
   link.classList.add('card-link')
   link.setAttribute('href', news.url)
+  link.setAttribute('target', '_blank')
+  link.setAttribute('rel', 'noopener noreferrer')
   link.innerHTML = 'click here to read'
   dataContainer.appendChild(link)
 
@@ -81,6 +102,13 @@ export function createCard(news) {
 export function createFooter() {
   let footer = document.createElement('footer')
   document.body.appendChild(footer)
+
+  let createdBy = document.createElement('p')
+  createdBy.classList.add('created-by')
+  createdBy.innerHTML = `Created by <a href="${linkGithub}" target="_blank" rel="noopener noreferrer">
+                            Marco Giuliani</a>`
+  footer.appendChild(createdBy)
+
 }
 
 //----- Time conversion -----
