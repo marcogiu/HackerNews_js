@@ -106,7 +106,7 @@ export function createFooter() {
   let createdBy = document.createElement('p')
   createdBy.classList.add('created-by')
   createdBy.innerHTML = `Created by <a href="${linkGithub}" target="_blank" rel="noopener noreferrer">
-                            Marco Giuliani</a>`
+                            Marco Giuliani</a> <br> <a target="_blank" href="https://icons8.com/icon/I48PjhWsrBoK/hacker">Hacker</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>`
   footer.appendChild(createdBy)
 
 }
@@ -120,8 +120,7 @@ function timeConverter(UNIX_timestamp) {
   let date = a.getDate();
   let hour = ('0' + a.getHours()).slice(-2);
   let min = ('0' + a.getMinutes()).slice(-2);
-  let sec = ('0' + a.getSeconds()).slice(-2);
-  let time = `${date}-${month}-${year} ${hour}:${min}:${sec}`;
+  let time = `${date}-${month}-${year} ${hour}:${min}`;
   return time;
 }
 

@@ -13,7 +13,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Hacker News',
-      template: './src/template.html'
+      template: './src/template.html',
+      favicon: './src/img/favicon.png'
     }),
     new Dotenv({
       systemvars: true,
