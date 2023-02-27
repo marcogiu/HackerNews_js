@@ -1,16 +1,17 @@
 <h1> HackerNews </h1>
 
-Javascript Advanced project for Full Stack Development course of [start2impact](https://www.start2impact.it/) , i take the news from API: https://github.com/HackerNews/API. <br>
+Javascript Advanced project for Full Stack Development course of [start2impact](https://www.start2impact.it/).
+I take the news from API: https://github.com/HackerNews/API. <br>
 Live demo: https://hackernewsinfo.netlify.app/
 
-## Table of Contents
+<h2>Table of Contents</h2>
 
-- [Technologies Used](#technologies-used)
+- [Technologies Used](#ciao)
 - [Features](#features)
 - [Screenshots](#screenshots)
 - [Contact](#contact)
 
-## Technologies Used
+<h3 id ="ciao">Technologies Used</h3>
 
 - HTML 5 &nbsp; <img src="assets/img/html-icon.png" width=20px height=20px>
 - CSS &nbsp; <img src="assets/img/css-icon.png" width=20px height=20px>
@@ -27,7 +28,8 @@ Live demo: https://hackernewsinfo.netlify.app/
 
 ## Screenshots
 
-### Desktop View 
+### Desktop View
+
 <img src="src/img/Screenshot-desktop.png" width=800px> 
 ### Mobile View 
 <img src="src/img/Screenshot-mobile.png" width=300px>
