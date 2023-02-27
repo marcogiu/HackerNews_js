@@ -1,4 +1,4 @@
-# HackerNews
+<h1> HackerNews </h1>
 
 Javascript Advanced project for Full Stack Development course of [start2impact](https://www.start2impact.it/) , i take the news from API: https://github.com/HackerNews/API. <br>
 Live demo: https://hackernewsinfo.netlify.app/
