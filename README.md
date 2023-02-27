@@ -27,8 +27,10 @@ Live demo: https://hackernewsinfo.netlify.app/
 
 ## Screenshots
 
-<img src="src/img/Screenshot-desktop.png" width=500px> &nbsp; <img src="assets/img/screenshot2.png" width=500px> &nbsp
-<img src="assets/img/screenshot1.png" width=500px>
+### Desktop View 
+<img src="src/img/Screenshot-desktop.png" width=800px> 
+### Mobile View 
+<img src="src/img/Screenshot-mobile.png" width=300px>
 
 ## Contact
 
