@@ -44,10 +44,14 @@ export function createMain() {
   titleMain.innerHTML = 'Latest News from Hacker News'
   main.appendChild(titleMain)
 
+  let loader = document.createElement('span')
+  loader.classList.add('loader')
+  main.appendChild(loader)
 
   let container = document.createElement('div')
   container.classList.add('container')
   main.appendChild(container)
+
 
   let loadMore = document.createElement('button')
   loadMore.classList.add('load-more')
@@ -70,6 +74,7 @@ export function createMain() {
 
 export function createCard(news) {
   let container = document.querySelector('.container')
+
   let card = document.createElement('div')
   card.classList.add('card')
   container.appendChild(card)

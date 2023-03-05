@@ -1,8 +1,7 @@
+const axios = require('axios')
+var _ = require('lodash')
 import '../scss/style.scss';
-import { createHeader } from './modules/createElement';
-import { createMain } from './modules/createElement';
-import { createCard } from './modules/createElement';
-import { createFooter } from './modules/createElement';
+import { createHeader, createMain, createCard, createFooter } from './modules/createElement';
 
 
 
@@ -17,20 +16,20 @@ const API_URL_ID = process.env.API_URL_ID
 
 
 let count = 0
+const loader = document.querySelector('.loader')
+const cointainer = document.querySelector('.container')
 const loadMore_button = document.querySelector('.load-more')
-
-function createCardFromId(news) {
-  createCard(news)
-}
 
 async function fetchItems(id) {
   axios.get(`${API_URL_ID}/${id}.json`)
 
     .then(response => {
       const data = _.get(response, 'data')
-      createCardFromId(data)
+      createCard(data)
+      loader.style.display = 'none'
     })
     .catch(error => {
+      alert(error)
       console.log(error)
     })
 }

@@ -73,6 +73,29 @@ main {
     margin-top: 2vh;
     font-size: 3em;
   }
+  .loader {
+    margin-top: 5em;
+    width: 15em;
+    height: 15em;
+    border: 1em solid $color1;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    &::after {
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      left: -1.5em;
+      top: 5em;
+      background: $color6;
+      width: 2em;
+      height: 2em;
+      transform: translate(-50%, 50%);
+      border-radius: 50%;
+      }
+    }
   .container {
     margin-top: 2.5vh;
     gap: 2.5vh;
@@ -80,11 +103,6 @@ main {
     grid-template-columns: 1fr;
     grid-gap: 2vh;
     .card {
-      &:hover {
-        background-color: $color1;
-        .card-title{ color: $color6}
-        .card-time { color: $color7}
-      }
       background-color: $color2;
       width: 80vw;
       height: 15vh;
@@ -94,6 +112,11 @@ main {
       display: flex;
       flex-direction: column;
       justify-content: space-around;
+      &:hover {
+        background-color: $color1;
+        .card-title{ color: $color6}
+        .card-time { color: $color7}
+      }
       .card-title {
         margin: 0 auto;
         font-size: 1.8em;
@@ -180,6 +203,16 @@ footer {
     a {
       color: $color5;
     }
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
