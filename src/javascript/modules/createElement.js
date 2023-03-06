@@ -52,24 +52,22 @@ export function createMain() {
   container.classList.add('container')
   main.appendChild(container)
 
-
-  let loadMore = document.createElement('button')
-  loadMore.classList.add('load-more')
-  loadMore.innerHTML = 'Load More'
-  loadMore.id = 'load-more'
-  main.appendChild(loadMore)
-
   let upButton = document.createElement('a')
   upButton.classList.add('up-btn')
   upButton.innerHTML = '&#8638;	'
   upButton.href = '#'
-  loadMore.after(upButton)
+  container.after(upButton)
 
   let downButton = document.createElement('a')
   downButton.classList.add('down-btn')
   downButton.innerHTML = '&#8643;'
   downButton.href = '#load-more'
   upButton.after(downButton)
+
+  let loadMore = document.createElement('button')
+  loadMore.classList.add('load-more')
+  loadMore.id = 'load-more'
+  main.appendChild(loadMore)
 }
 
 export function createCard(news) {
@@ -128,6 +126,8 @@ function timeConverter(UNIX_timestamp) {
   let time = `${date}-${month}-${year} ${hour}:${min}`;
   return time;
 }
+
+
 
 
 

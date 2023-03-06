@@ -7,32 +7,29 @@ import { createHeader, createMain, createCard, createFooter } from './modules/cr
 
 createHeader()
 createMain()
-createFooter()
-
-
 
 const API_URL = process.env.API_URL
 const API_URL_ID = process.env.API_URL_ID
 
-
 let count = 0
 const loader = document.querySelector('.loader')
-const cointainer = document.querySelector('.container')
+const container = document.querySelector('.container')
 const loadMore_button = document.querySelector('.load-more')
 
 async function fetchItems(id) {
   axios.get(`${API_URL_ID}/${id}.json`)
-
     .then(response => {
       const data = _.get(response, 'data')
       createCard(data)
       loader.style.display = 'none'
+      container.style.display = 'grid'
     })
     .catch(error => {
       alert(error)
       console.log(error)
     })
 }
+
 async function loadNews() {
   axios.get(API_URL)
     .then(response => {
@@ -41,13 +38,15 @@ async function loadNews() {
     })
 }
 
-loadNews()
-
+setTimeout(loadNews, 3000)
 
 loadMore_button.addEventListener('click', () => {
   count += 10
-  loadNews()
-
+  loadMore_button.classList.add('spinner')
+  setTimeout(() => {
+    loadNews()
+    loadMore_button.classList.remove('spinner')
+  }, 3000);
 })
 
 
