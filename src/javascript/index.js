@@ -7,6 +7,7 @@ import { createHeader, createMain, createCard, createFooter } from './modules/cr
 
 createHeader()
 createMain()
+createFooter()
 
 const API_URL = process.env.API_URL
 const API_URL_ID = process.env.API_URL_ID
@@ -25,7 +26,7 @@ async function fetchItems(id) {
       container.style.display = 'grid'
     })
     .catch(error => {
-      alert(error)
+      alert('Error, please reload the page')
       console.log(error)
     })
 }
@@ -46,7 +47,7 @@ loadMore_button.addEventListener('click', () => {
   setTimeout(() => {
     loadNews()
     loadMore_button.classList.remove('spinner')
-  }, 3000);
+  }, 2000)
 })
 
 

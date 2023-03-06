@@ -69,6 +69,7 @@ main {
   align-items: center;
   flex-direction: column;
   width: 100vw;
+  min-height: 80vh;
   .main-title {
     margin-top: 2vh;
     font-size: 3em;
@@ -179,7 +180,7 @@ main {
       border: 0.2em solid transparent;
       border-top-color: $color7;
       border-radius: 50%;
-      animation: loadSpinner 1s ease infinite;
+      animation: rotation 1s ease infinite;
     }
   .up-btn,
   .down-btn {
@@ -211,23 +212,12 @@ main {
   }
 }
 
-@keyframes loadSpinner {
-  from {
-      transform: rotate(0deg);
-    }
-  
-    to {
-      transform: rotate(360deg);
-    }
-}
-
-
-
-
 footer {
   background-color: $color2;
   height: fit-content;
   width: 100vw;
+  bottom: 0;
+
   .created-by {
     font-size: 1.5em;
     text-align: center;
